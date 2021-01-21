@@ -1,11 +1,12 @@
 const mongoose = require('../connection')
 
 const ArtworkSchema = mongoose.Schema({
-	name: String,
+	// name: String,
 	art: String,
+	// png: String,
 	
 })
 
-let user = mongoose.model('Artwork', ArtworkSchema)
+let artwork = mongoose.model('Artwork', ArtworkSchema)
 
 module.exports = artwork

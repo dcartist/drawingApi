@@ -8,6 +8,12 @@ router.get("/", (req, res) => {
   });
 });
 
+router.post("/", (req, res) => {
+    Artwork.create(req.body).then(created => {
+    res.json(created);
+  });
+});
+
 // router.get("/:email", (req, res) => {
 //   let userEmail = req.params.email;
 //   Artwork.findOne({ email: userEmail }).then(user => {
@@ -15,8 +21,4 @@ router.get("/", (req, res) => {
 //   });
 // });
 
-router.post("/", (req, res) => {
-    Artwork.create(req.body).then(created => {
-    res.json(created);
-  });
-});
+module.exports = router
