@@ -1,9 +1,7 @@
 const mongoose = require('../connection')
 
 const ArtworkSchema = mongoose.Schema({
-	// name: String,
 	art: String,
-	// png: String,
 	
 })
 
