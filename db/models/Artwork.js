@@ -1,9 +1,9 @@
 const mongoose = require('../connection')
 
 const ArtworkSchema = mongoose.Schema({
+	updated: { type: Date, default: Date.now },
 	art: String,
 	paths:[],
-	updated: { type: Date, default: Date.now },
 
 	
 })

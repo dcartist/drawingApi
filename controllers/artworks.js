@@ -26,7 +26,7 @@ router.put("/update/:id", (req, res) => {
       .then(update => res.json(update))
 })
 
-router.delete("/delete/:id", (req, res) => {
+router.delete("/delete/id/:id", (req, res) => {
   Artwork.findOneAndDelete({ _id: req.params.id }).then(deleted => res.json(deleted))
 })
 router.get("/delete/all/", (req, res) => {
