@@ -7,8 +7,9 @@ const artworkController = require('./controllers/artworks')
 
 // app.use(express.json());
 app.use(cors())
-app.use(parser.urlencoded({ extended: true }))
-app.use(parser.json())
+// app.use(parser.urlencoded({ extended: true }))
+app.use(parser.json({ limit: '10mb' }))
+app.use(parser.urlencoded({ extended: true, limit: '10mb' }));
 app.get('/', function (req, res) {
   res.send('Hello World!')
 })
